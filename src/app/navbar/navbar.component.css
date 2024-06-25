@@ -1,0 +1,75 @@
+/* @media (min-width:780) { */
+    
+.custom{
+    position: absolute;
+    transition: all ease-in-out 0.5s;
+    transform-origin: center;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    animation: hamburger 500ms forwards 1 ease-in-out;
+    border: 1px solid lightgrey;
+    box-shadow: 1px 1px 1px 1px darkgray;
+    backdrop-filter: blur(20px);
+}
+
+@keyframes hamburger {
+    from{
+        top: 0;
+        right: 0;
+        transform: scale(0);
+        height: 0;
+        width: 0;
+    }
+    to{
+        top: 70%;
+        right: 0;   
+        transform: scale(1);
+        height: fit-content;
+        width: 100vw;
+
+    }
+}
+
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#000;
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+  .ham1.active{
+    border-bottom: 0;
+  }
+  .ham1 .top {
+    stroke-dasharray: 40 139;
+  }
+  .ham1 .bottom {
+    stroke-dasharray: 40 180;
+  }
+  .ham1.active .top {
+    stroke-dashoffset: -98px;
+  }
+  .ham1.active .bottom {
+    stroke-dashoffset: -138px;
+  }
+/* } */
+

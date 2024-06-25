@@ -1,0 +1,22 @@
+<div class="h-[40vh] w-full flex flex-col justify-center items-center " >
+    <!-- <label for="search" class="mr-2" > Search </label> -->
+   <div>
+       <input type="text"  class="w-[70vw]" placeholder="search" [(ngModel)]="this.searchTerm">
+       <button (click)="fetchFilterNotes()" class="bg-[#6C63FF] border-2 ml-2 border-[#6C63FF] transition-all text-white font-medium px-4 py-2 rounded-md hover:border-2 hover:px-4 hover:py-2 hover:border-[#6C63FF] hover:bg-transparent hover:text-[#6C63FF] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+           search
+       </button>
+   </div>
+    <div class="ml-[-7vw]" >
+        <span class="font-serif font-light" > Search by </span>
+        <label class="inline-flex mx-2 items-center">
+            <input type="radio" class="form-radio" name="option" value=0  [(ngModel)]="selectedTag" >
+            <span class="ml-2 font-bold ">Title</span>
+          </label>
+          <label class="inline-flex mx-2 items-center">
+            <input type="radio" class="form-radio" name="true" value=1  [(ngModel)] = "selectedTag" >
+            <span class="ml-2 font-bold ">Tags</span>
+          </label>
+    </div>
+</div>
+
+<app-view-notes [callBySearch]="true"></app-view-notes>

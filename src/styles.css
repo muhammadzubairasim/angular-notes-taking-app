@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    transition: all 0.5s ease-in-out;
+    padding-bottom: 10px;
+    border-bottom: 1px black solid;/* Add underline to active link */
+  }
+  
+  input[type="text"] {
+    width: min(400px,60vw);
+    padding: 8px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+    font-size: 16px;
+  }
+
+  /* Styling for the input field when it is focused */
+  input[type="text"]:focus {
+    border-color: #007BFF; /* Change to your preferred focus color */
+    outline: none; /* Remove the default outline */
+  }
+
+  .ng-dropdown-panel .ng-option {
+    background-color: #e2e2e2;
+    border: 1px solid #ccc;
+    width: 50%;
+    padding: 0.5rem 1rem;
+  }
+  .ng-input input{
+    border: none;
+    all: unset;
+  }
+  /* Style for ng-select selected tags */
+  .ng-value-container .ng-value{
+    padding: 8px 20px;
+    border: 2px solid #ccc;
+    background-color: #e2e8f0;
+    color: #2d3748;
+    border-radius:10px;
+    /* padding: 0.25rem 0.5rem; */
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+
+  /* Style for ng-select clear icon */
+  .ng-clear-wrapper {
+    display: none; /* Hide the clear icon */
+  }
